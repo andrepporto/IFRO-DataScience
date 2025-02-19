@@ -38,7 +38,7 @@ if uploaded_file is not None:
 
     # Predição
     prediction = model.predict(img_array)
-    print(prediction)
+    print(prediction[0][0])
     label = "Cachorro 🐶" if prediction[0][0] >= 0.5 else "Gato 🐱"
 
     st.write(f"### Resultado: {label}")
